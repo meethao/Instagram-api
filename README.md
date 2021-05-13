@@ -1,1 +1,3 @@
 # Instagram-api
+module
+bcryptjs
