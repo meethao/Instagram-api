@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "9f9162b6-4c2b-4ee4-86f0-896e8c505c89",
+		"_postman_id": "ac85ab58-3b73-496e-95fc-e46a1cf01a4e",
 		"name": "FInal-Project",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -39,12 +39,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users/",
+							"raw": "http://localhost:6000/users/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"users",
 								""
@@ -59,12 +59,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/users?page=2",
+							"raw": "http://localhost:6000/users?page=2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"users"
 							],
@@ -109,12 +109,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/usersssss/",
+							"raw": "http://localhost:6000/usersssss/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"usersssss",
 								""
@@ -154,12 +154,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users/1",
+							"raw": "http://localhost:6000/users/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"users",
 								"1"
@@ -199,15 +199,44 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users/100000",
+							"raw": "http://localhost:6000/users/100000",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"users",
 								"100000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:6000/users/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"sfitzroy0\",\r\n    \"userPassword\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"users",
+								"login"
 							]
 						}
 					},
@@ -241,12 +270,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users/",
+							"raw": "http://localhost:6000/users/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"users",
 								""
@@ -283,12 +312,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users/",
+							"raw": "http://localhost:6000/users/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"users",
 								""
@@ -326,12 +355,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users/",
+							"raw": "http://localhost:6000/users/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"users",
 								""
@@ -356,11 +385,21 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTYyMjU3OTQ3MywiZXhwIjoxNjIyNjY1ODczfQ.2kEBLxmRsIPVk9nkU3V6yhIliyZizjliGi3BkTU-9-Q",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"userId\":1,\n    \"userName\":\"sfitzroy0\",\n    \"userPassword\":\"MrtmM9U\",\n    \"email\":\"heheha@gmial.com\"\n}",
+							"raw": "{\n    \"email\":\"heheha@gmial.com\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -368,12 +407,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users/1",
+							"raw": "http://localhost:6000/users/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"users",
 								"1"
@@ -410,12 +449,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users/15",
+							"raw": "http://localhost:6000/users/15",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"users",
 								"15"
@@ -452,12 +491,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users/10",
+							"raw": "http://localhost:6000/users/10",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"users",
 								"10"
@@ -494,12 +533,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users/100000",
+							"raw": "http://localhost:6000/users/100000",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"users",
 								"100000"
@@ -524,6 +563,16 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTYyMjU3OTQ3MywiZXhwIjoxNjIyNjY1ODczfQ.2kEBLxmRsIPVk9nkU3V6yhIliyZizjliGi3BkTU-9-Q",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"body": {
@@ -536,12 +585,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users/1",
+							"raw": "http://localhost:6000/users/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"users",
 								"1"
@@ -578,12 +627,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users/170",
+							"raw": "http://localhost:6000/users/170",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"users",
 								"170"
@@ -628,12 +677,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/postsssss/",
+							"raw": "http://localhost:6000/postsssss/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"postsssss",
 								""
@@ -673,12 +722,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/posts/",
+							"raw": "http://localhost:6000/posts/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"posts",
 								""
@@ -693,12 +742,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/posts?page=2",
+							"raw": "http://localhost:6000/posts?page=2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"posts"
 							],
@@ -743,12 +792,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/posts/2",
+							"raw": "http://localhost:6000/posts/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"posts",
 								"2"
@@ -788,12 +837,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/posts/100000",
+							"raw": "http://localhost:6000/posts/100000",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"posts",
 								"100000"
@@ -818,11 +867,21 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImlhdCI6MTYyMjU4MDAxNiwiZXhwIjoxNjIyNjY2NDE2fQ.JK75j5EwvexpiO0JG9AGOnL9j0YUPKnoluOp9ZYti1M",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n        \"postId\":32,\n        \"userId\":1,\n        \"caption\":\"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet.\"\n    }",
+							"raw": "{\n        \"postId\":31,\n        \"userId\":2,\n        \"caption\":\"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet.\"\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -830,12 +889,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/posts/",
+							"raw": "http://localhost:6000/posts/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"posts",
 								""
@@ -872,12 +931,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/posts/",
+							"raw": "http://localhost:6000/posts/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"posts",
 								""
@@ -914,12 +973,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/posts/",
+							"raw": "http://localhost:6000/posts/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"posts",
 								""
@@ -956,12 +1015,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/posts/15",
+							"raw": "http://localhost:6000/posts/15",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"posts",
 								"15"
@@ -998,12 +1057,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/posts/15",
+							"raw": "http://localhost:6000/posts/15",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"posts",
 								"15"
@@ -1040,12 +1099,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/posts/1500",
+							"raw": "http://localhost:6000/posts/1500",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"posts",
 								"1500"
@@ -1082,12 +1141,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/posts/1",
+							"raw": "http://localhost:6000/posts/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"posts",
 								"1"
@@ -1124,12 +1183,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/posts/1500",
+							"raw": "http://localhost:6000/posts/1500",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"posts",
 								"1500"
@@ -1174,12 +1233,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/comments/400",
+							"raw": "http://localhost:6000/comments/400",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"comments",
 								"400"
@@ -1219,12 +1278,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/comments/3",
+							"raw": "http://localhost:6000/comments/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"comments",
 								"3"
@@ -1264,12 +1323,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/comments/",
+							"raw": "http://localhost:6000/comments/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"comments",
 								""
@@ -1309,12 +1368,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/commentsss/",
+							"raw": "http://localhost:6000/commentsss/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"commentsss",
 								""
@@ -1339,11 +1398,21 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJpYXQiOjE2MjI1ODcwNTQsImV4cCI6MTYyMjY3MzQ1NH0.GStgWPVXSGjYVEJzN8DHJ4qY7ep90BNlpsWDgjJ4S2g",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n        \"commentId\":16,\n        \"userId\":11,\n        \"postId\":15,\n        \"review\":\"Maecenas pulvinar lobortis est.\"\n    }",
+							"raw": "{\n        \"commentId\":16,\n        \"userId\":11,\n        \"postId\":24,\n        \"review\":\"Maecenas pulvinar lobortis est.\"\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1351,12 +1420,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/comments/",
+							"raw": "http://localhost:6000/comments/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"comments",
 								""
@@ -1393,12 +1462,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/comments/",
+							"raw": "http://localhost:6000/comments/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"comments",
 								""
@@ -1435,12 +1504,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/commentss/",
+							"raw": "http://localhost:6000/commentss/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"commentss",
 								""
@@ -1477,12 +1546,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/comments/15",
+							"raw": "http://localhost:6000/comments/15",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"comments",
 								"15"
@@ -1508,11 +1577,21 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImlhdCI6MTYyMjU4NjgwNiwiZXhwIjoxNjIyNjczMjA2fQ.4vwEnzQvci2itiLu3HS5XyObxXiJRpQeaC0CkN8cIiE",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n        \"commentId\":15,\n        \"userId\":9,\n        \"postId\":17,\n        \"review\":\"Curabitur gravida nisi at nibh.\"\n    }",
+							"raw": "{\n        \"userId\":3,\n        \"review\":\"Curabitur gravida nisi at nibh.\"\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1520,15 +1599,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/comments/15",
+							"raw": "http://localhost:6000/comments/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"comments",
-								"15"
+								"3"
 							]
 						}
 					},
@@ -1562,12 +1641,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/comments/150",
+							"raw": "http://localhost:6000/comments/150",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"comments",
 								"150"
@@ -1592,6 +1671,16 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsImlhdCI6MTYyMjU4Njk4MywiZXhwIjoxNjIyNjczMzgzfQ.xTyiXw69zapdAqamewIs0wuBRwLupaRDiBd0ZGJSoYg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"body": {
@@ -1604,15 +1693,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/comments/16",
+							"raw": "http://localhost:6000/comments/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"comments",
-								"16"
+								"1"
 							]
 						}
 					},
@@ -1646,12 +1735,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/comments/180",
+							"raw": "http://localhost:6000/comments/180",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"comments",
 								"180"
@@ -1696,12 +1785,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/likes/",
+							"raw": "http://localhost:6000/likes/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"likes",
 								""
@@ -1741,12 +1830,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/likesssss/",
+							"raw": "http://localhost:6000/likesssss/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"likesssss",
 								""
@@ -1786,12 +1875,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/likes/3",
+							"raw": "http://localhost:6000/likes/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"likes",
 								"3"
@@ -1831,12 +1920,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/likes/30000",
+							"raw": "http://localhost:6000/likes/30000",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"likes",
 								"30000"
@@ -1861,11 +1950,21 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTYyMjU4NjQxMiwiZXhwIjoxNjIyNjcyODEyfQ.Z0ce1gsdCyHUQmEtPIVwus1dNnVTpxSfgZKEnRKkSgc",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n        \"id\":1,\n        \"likeId\":1,\n        \"userId\":15,\n        \"postId\":14,\n        \"like_post\":true\n    }",
+							"raw": "{\n        \"likeId\":13,\n        \"userId\":1,\n        \"postId\":22,\n        \"like_post\":true\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1873,12 +1972,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/likes/",
+							"raw": "http://localhost:6000/likes/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"likes",
 								""
@@ -1915,12 +2014,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/likes/",
+							"raw": "http://localhost:6000/likes/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"likes",
 								""
@@ -1958,12 +2057,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/likesssss/",
+							"raw": "http://localhost:6000/likesssss/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"likesssss",
 								""
@@ -1973,42 +2072,30 @@
 					"response": []
 				},
 				{
-					"name": "DELETE-likes-id-204",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Status test\", function () {",
-									"    pm.response.to.have.status(204);",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
+					"name": "http://localhost:6000/likes/13",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTYyMjU4NjY0OCwiZXhwIjoxNjIyNjczMDQ4fQ.bp1cBQn9U3AzDg1hKMsFfb2govLQgMylGbRIJdgd5qI",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n        \"id\":10,\n        \"likeId\":10,\n        \"userId\":2,\n        \"postId\":23,\n        \"like_post\":true\n    }",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://localhost:8000/likes/2",
+							"raw": "http://localhost:6000/likes/13",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"likes",
-								"2"
+								"13"
 							]
 						}
 					},
@@ -2042,15 +2129,200 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/likes/2000",
+							"raw": "http://localhost:6000/likes/2000",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
+							"port": "6000",
 							"path": [
 								"likes",
 								"2000"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "videos",
+			"item": [
+				{
+					"name": "http://localhost:6000/videos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "videoId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "postId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "userId",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "videoFile",
+									"type": "file",
+									"src": "/C:/Users/94004/OneDrive/桌面/taylor-video.mp4"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:6000/videos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"videos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:6000/videos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "videoId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "postId",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "userId",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "videoFile",
+									"type": "file",
+									"src": "/C:/Users/94004/OneDrive/桌面/test1.mp4"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:6000/videos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"videos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:6000/videos/26",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/videos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"videos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:6000/videos/29",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/videos/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"videos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:6000/videos/media/videos/329a7992811b01857e0fbab5decd2e94.mp4",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/videos/media/videos/08e3670ee7640441db1dfad68039aa28.mp4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"videos",
+								"media",
+								"videos",
+								"08e3670ee7640441db1dfad68039aa28.mp4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:6000/videos/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsImlhdCI6MTYyMjY4NTIwNCwiZXhwIjoxNjIyNzcxNjA0fQ.Ctd-IgeF0eUw5Vr3Rw0HsVUvWE2o-Ox3h8CW8-TikA8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/videos/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"videos",
+								"2"
 							]
 						}
 					},

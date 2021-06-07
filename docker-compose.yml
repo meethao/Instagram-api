@@ -1,0 +1,36 @@
+version: "3.7"
+services:
+  api:
+    build: .
+    image: instagram-api
+    restart: always
+    ports:
+      - 6000:6000
+    environment:
+      MYSQL_DATABASE: "instagram"
+      MYSQL_USER: "instagram"
+      MYSQL_PASSWORD: "group8"
+      MYSQL_HOST: mysql
+      MYSQL_PORT: 3306
+      REDIS_HOST: redis
+
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - 6379:6379
+
+  mysql:
+    image: mysql:latest
+    restart: always
+    volumes:
+      - mysql-data:/var/lib/mysql2
+      - ./db-init/:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+      MYSQL_DATABASE: "instagram"
+      MYSQL_USER: "instagram"
+      MYSQL_PASSWORD: "group8"
+
+volumes:
+  mysql-data:

@@ -1,7 +1,7 @@
 /*
  * User schema and data accessor methods.
  */
-
+const bcrypt = require('bcryptjs');
 const mysqlPool = require('../lib/mysqlPool');
 const { extractValidFields } = require('../lib/validation');
 const { getPostsByUserId } = require('./posts');
@@ -90,11 +90,15 @@ exports.checkUserId = checkUserId;
  * a Promise that resolves to the ID of the newly-created user entry.
  */
 async function insertNewUser(user) {
-    user = extractValidFields(user, UserSchema);
-    const [ result ] = await mysqlPool.query(
+  const userToInsert = extractValidFields(user, UserSchema);
+  console.log("  -- userToInsert before hashing:", userToInsert);
+  userToInsert.userPassword = await bcrypt.hash(userToInsert.userPassword, 8);
+  console.log("  -- userToInsert after hashing:", userToInsert);
+  
+  const [ result ] = await mysqlPool.query(
       'INSERT INTO users SET ?',
-      user
-    );
+      userToInsert
+  );
   
     return result.insertId;
   }
@@ -169,4 +173,28 @@ async function replaceUserById(id, users) {
     return result.affectedRows > 0;
   }
   exports.deleteUserById = deleteUserById;
+
+
+/*
+ * Executes a MySQL query to fetch information about a single specified
+ * user based on its userName.  Does not fetch post, comment, and like data for the
+ * users.  Returns a Promise that resolves to an object containing
+ * information about the requested user.  If no user with the
+ * specified userName exists, the returned Promise will resolve to null.
+ */
+  async function getUserByUserName (userName) {      
+         const [ results ] = await mysqlPool.query(
+          'SELECT * FROM users WHERE userName = ?',
+          [ userName ]
+        );
   
+        return results[0].userPassword;
+  
+   };
+   exports.getUserByUserName= getUserByUserName;
+  
+  async function validateUser(userName, userPassword) {
+    const result = await getUserByUserName(userName);
+    return await bcrypt.compare(userPassword, result);
+  };
+  exports.validateUser = validateUser;
