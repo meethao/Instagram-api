@@ -54,8 +54,7 @@ This project uses docker container to store application data. Created MySQL imag
 
 ## 4. Enable JWT-based user logins and implement a user data access endpoint
 This project have enabled user registration for application, implement a new POST /users/login API endpoint that allows a registered user to log in by sending their username and password. If the username/password combination is valid, this project responds with a JWT token, which the user can then send with future requests to authenticate themselves. The JWT token payload should contain the user's ID and it should expire after 24 hours.
-
-If a user attempts to log in with an invalid username or password, you should respond with a 401 error.
+ * If a user attempts to log in with an invalid username or password, you should respond with a 401 error.
 
 ## 5. Require authorization to perform certain API actions
 Once users can log in, modify Instagram API so that it requires clients to authenticate users to implement the following authorization scheme:
