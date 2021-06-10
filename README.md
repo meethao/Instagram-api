@@ -69,6 +69,8 @@ Once users can log in, modify Instagram API so that it requires clients to authe
 
 ## 7. Store uploaded photo data in GridFS
 The API to store those image files in GridFS in the MongoDB database that's already powering the API. Photo metadata corresponding the image files should be stored alongside the files themselves.
+ * GET /user/{id}
+ * GET /photos/{id}
 
 ## 8. Use RabbitMQ to generate new image sizes offline
 This API use RabbitMQ to facilitate the generation of multiple resized versions of every image. 
