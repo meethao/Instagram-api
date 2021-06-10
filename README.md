@@ -51,3 +51,25 @@ This project uses docker container to store application data. Created MySQL imag
  * Uss MySQL database to store application data.
  * Use foreign keys to link posts to their corresponding user.
  * Use foreign keys to link comments and likes to their corresponding posts.
+
+## 4. Enable JWT-based user logins and implement a user data access endpoint
+This project have enabled user registration for application, implement a new POST /users/login API endpoint that allows a registered user to log in by sending their username and password. If the username/password combination is valid, this project responds with a JWT token, which the user can then send with future requests to authenticate themselves. The JWT token payload should contain the user's ID and it should expire after 24 hours.
+
+If a user attempts to log in with an invalid username or password, you should respond with a 401 error.
+
+## 5. Require authorization to perform certain API actions
+Once users can log in, modify Instagram API so that it requires clients to authenticate users to implement the following authorization scheme:
+  * Only an authorized user can see their own user information.
+  * Only an authorized user can create new photos, reviews, and like.
+  * Only an authorized user can modify or delete their own photos, reviews, and like.
+
+## 6. Rate limiting
+ * Requests that do not come from an authenticated user are rate-limited on a per-IP address basis. These unauthenticated requests can be made at a rate of 5 requests per minute.
+ * Requests that come from an authenticated user are rate-limited on a per-user basis. These authenticated requests can be made at a rate of 10 requests per minute.
+
+## 7. Store uploaded photo data in GridFS
+The API to store those image files in GridFS in the MongoDB database that's already powering the API. Photo metadata corresponding the image files should be stored alongside the files themselves.
+
+## 8. Use RabbitMQ to generate new image sizes offline
+This API use RabbitMQ to facilitate the generation of multiple resized versions of every image. 
+ * Implement a RabbitMQ consumer that generates multiple sizes for a given image. User should specifically use information from each message it processes to fetch a newly-uploaded photo file from GridFS and generate multiple smaller, resized versions of that photo file.
